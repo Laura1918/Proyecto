@@ -10,86 +10,132 @@
   
 </head>
 <body>
+    <h1 class="titulo">Friendly Pets Shop</h1>
     <header>
-        <h1 class="titulo">Friendly Pets Shop</h1>
-        
+        <nav>
+            <ul class="navegacion">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="#">Perros</a></li>
+                <li><a href="#">Gatos</a></li>
+                <li>
+                    <a href="#"class ="container-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart" > <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /> </svg>
+                    </a>
+                    <div class="count-products">
+                        <span id="contador-productos">0</span>
+                    </div>
+                </li>
+                <li>
+                    <button type="button" onclick="window.location.href='pagina-de-registro.html';">Registrarse</button>
+                </li>
+            </ul>
+        </nav>
+            <div class="container-icon">
+
+                <div class="container-cart-products hidden-cart">
+                    <div class="row-product hidden">
+                        <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="imagen-producto"><img src="multimedia/EQUIPOS/mac-pro.webp"></span>
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">equipos</p>
+                            <span class="precio-producto-carrito">$80</span>
+                        </div>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="icon-close"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M6 18L18 6M6 6l12 12"
+                            />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="cart-total hidden">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$200</span>
+                </div>
+                <p class="cart-empty">El carrito está vacío</p>
+            </div>
+        </div>
+            
     </header>
-    <nav class="navegacion contenedor ">
-        <a href="#">Inicio</a>
-        <a href="#">Promociones</a>
-        <a href="#">Perros</a>
-        <a href="#">Gatos</a>
-        <button type="button" onclick="window.location.href='pagina-de-registro.html';">Registrarse</button>
+      
+            <section class="hero">
+                <div class="contenido-hero">
+                 <h2 class="titulo">Los Mejores Productos Para Tu Mascota</h2>
+                <p> <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M12.783 21.326a2 2 0 0 1 -2.196 -.426l-4.244 -4.243a8 8 0 1 1 13.657 -5.62" /><path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" /><path d="M19 18v.01" /></svg>  Medellin,antioquia</p>
+                </div>
+            </section>
 
+                <main class="sombras">
+                    <div class="servicios">
+                        <section class="servicio">
+                            <div class="iconos">
+                            <h3>Perros</h3>
+                            <button class="image-button" onclick="alert('Has hecho clic!')">
+                            <img src="imagenes/salchicha.avif" alt="Botón Imagen";>
+                             </div>
+                        </section>
 
-    </nav>
+                         <section class="servicio">
+                            <div class="iconos">
+                             <h3>Gatos</h3>
+                             <button class="image-button" onclick="alert('Has hecho clic!')">
+                             <img src="imagenes/gatos.jpg" alt="Botón Imagen">
+                            </div>
+                        </section>
 
-
-   <section class="hero">
-    <div class="contenido-hero">
-        <h2 class="titulo">Los Mejores Productos Para Tu Mascota</h2>
-        <p> <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M12.783 21.326a2 2 0 0 1 -2.196 -.426l-4.244 -4.243a8 8 0 1 1 13.657 -5.62" /><path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" /><path d="M19 18v.01" /></svg>  Medellin,antioquia</p>
-    </div>
-   </section>
-
-   <main class="sombras">
-    <div class="servicios">
-    <section class="servicio">
-    <div class="iconos">
-        <h3>Perros</h3>
-        <button class="image-button" onclick="alert('Has hecho clic!')">
-        <img src="imagenes/salchicha.avif" alt="Botón Imagen";>
-    </div>
-    </section>
-    <section class="servicio">
-    <div class="iconos">
-        <h3>Gatos</h3>
-        <button class="image-button" onclick="alert('Has hecho clic!')"></button>
-        <img src="imagenes/gatos.jpg" alt="Botón Imagen">
-    </div>
-    </section>
-    <section class="servicio">
-     <div class="iconos">
-        <h3>Promociones</h3>
-        <button class="image-button" onclick="alert('Has hecho clic!')"></button>
-        <img src="imagenes/promo.jpg" alt="promo">
-     </div>
-     </section>
-    </div>
-   </main>
+                        <section class="servicio">
+                            <div class="iconos">
+                             <h3>Promociones</h3>
+                             <button class="image-button" onclick="alert('Has hecho clic!')">
+                             <img src="imagenes/promo.jpg" alt="promo">
+                            </div>
+                        </section>
+                    </div>
+                </main>
  
 
-   <section>
-    <h2>conctatanos</h2>
- <form>
-  <fieldset>
-    <legend>Conctatanos llendo el formato</legend>
-    <div>
-        <label>Nombre</label>
-        <input type="text" placeholder="Nombre">
-    </div>
-   
-<div>
-    <label>Telefono</label>
-    <input type="number" placeholder="Telefono">
-</div>
+            <section>
+                <h2>conctatanos</h2>
+                <form>
+                 <fieldset>
+                     <legend>Conctatanos llenando el formato</legend>
+                        <div>
+                            <label>Nombre</label>
+                            <input type="text" placeholder="Nombre">
+                        </div>
+
+                        <div>
+                         <label>Telefono</label>
+                         <input type="number" placeholder="Telefono">
+                        </div>
  
-    <div>
-        <label>Mensaje</label>
-        <textarea></textarea>
-    </div>
-<div>
-    <input type="submit" value="Enviar">
-</div>
+                        <div>
+                         <label>Mensaje</label>
+                         <textarea></textarea>
+                        </div>
+
+                        <div>
+                         <input type="submit" value="Enviar">
+                        </div>
     
-  </fieldset>
+                    </fieldset>
+                </form>
+            </section>
 
-  
- </form>
-   </section>
-   <footer>
-    <p>Derechos Reservardos Laura Valentina Martinez Perez</p>
-   </footer>
-   
-</body>
+                <footer>
+                    <p>Derechos Reservardos Laura Valentina Martinez Perez</p>
+                </footer>
+        
+  </body>
 </html>

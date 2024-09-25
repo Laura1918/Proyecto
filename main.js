@@ -1,20 +1,27 @@
-const btnCart = document.querySelector('.container-cart-icon');
-const containerCartProducts = document.querySelector(
-	'.container-cart-products'
-);
+const btnCart = document.querySelector('.container-cart-icon')
+const containerCartProducts = document.querySelector('.container-cart-products')
 
 btnCart.addEventListener('click', () => {
-	containerCartProducts.classList.toggle('hidden-cart');
-});
+    containerCartProducts.classList.toggle('hidden-cart')
+     AgregarCarritoStorage ();
+	 
+})
 
-/* ========================= */
+function AgregarCarritoStorage(){
+
+	localStorage.setItem('carrito',JSON.stringify(allProducts
+
+	))
+
+}
+
 const cartInfo = document.querySelector('.cart-product');
 const rowProduct = document.querySelector('.row-product');
 
-// Lista de todos los contenedores de productos
-const productsList = document.querySelector('.container-items');
 
-// Variable de arreglos de Productos
+const productsList = document.querySelector('.products');
+
+
 let allProducts = [];
 
 const valorTotal = document.querySelector('.total-pagar');
@@ -24,14 +31,18 @@ const countProducts = document.querySelector('#contador-productos');
 const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
 
+
+
 productsList.addEventListener('click', e => {
 	if (e.target.classList.contains('btn-add-cart')) {
-		const product = e.target.parentElement;
+		const product = e.target.closest('.product');
 
 		const infoProduct = {
 			quantity: 1,
-			title: product.querySelector('h2').textContent,
+			title: product.querySelector('h3').textContent,
 			price: product.querySelector('p').textContent,
+            image: product.querySelector('img').src
+
 		};
 
 		const exits = allProducts.some(
@@ -51,7 +62,7 @@ productsList.addEventListener('click', e => {
 		} else {
 			allProducts = [...allProducts, infoProduct];
 		}
-
+         AgregarCarritoStorage();
 		showHTML();
 	}
 });
@@ -66,12 +77,13 @@ rowProduct.addEventListener('click', e => {
 		);
 
 		console.log(allProducts);
+		AgregarCarritoStorage();
 
 		showHTML();
 	}
 });
 
-// Funcion para mostrar  HTML
+
 const showHTML = () => {
 	if (!allProducts.length) {
 		cartEmpty.classList.remove('hidden');
@@ -83,7 +95,7 @@ const showHTML = () => {
 		cartTotal.classList.remove('hidden');
 	}
 
-	// Limpiar HTML
+	
 	rowProduct.innerHTML = '';
 
 	let total = 0;
@@ -95,6 +107,7 @@ const showHTML = () => {
 
 		containerProduct.innerHTML = `
             <div class="info-cart-product">
+			  	<span class="imagen-producto"><img src="${product.image}" /></span>
                 <span class="cantidad-producto-carrito">${product.quantity}</span>
                 <p class="titulo-producto-carrito">${product.title}</p>
                 <span class="precio-producto-carrito">${product.price}</span>

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="Poppins/Poppins-SemiBold.ttf">
     <link rel="stylesheet" href="stalys.css" as="stalys">
+    
+
   
 </head>
 <body>
@@ -16,7 +18,7 @@
             <ul class="navegacion">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Promociones</a></li>
-                <li><a href="#">Perros</a></li>
+                <li><a href="perros.html">Perros</a></li>
                 <li><a href="#">Gatos</a></li>
                 <li>
                     <a href="#"class ="container-icon">
@@ -27,7 +29,7 @@
                     </div>
                 </li>
                 <li>
-                    <button type="button" onclick="window.location.href='pagina-de-registro.html';">Registrarse</button>
+                    <button type="button" onclick="window.location.href='registro.html';">Registrarse</button>
                 </li>
             </ul>
         </nav>
@@ -41,6 +43,7 @@
                             <span class="cantidad-producto-carrito">1</span>
                             <p class="titulo-producto-carrito">equipos</p>
                             <span class="precio-producto-carrito">$80</span>
+                            <script src="./main.js/AgregarCarritoStorage.js" defer></script>
                         </div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -81,15 +84,16 @@
                         <section class="servicio">
                             <div class="iconos">
                             <h3>Perros</h3>
-                            <button class="image-button" onclick="alert('Has hecho clic!')">
+                            <a href="perros.html">
+                            <button class="image-button" onclick="('')">
                             <img src="imagenes/salchicha.avif" alt="Botón Imagen";>
+                            </a>
                              </div>
                         </section>
-
                          <section class="servicio">
                             <div class="iconos">
                              <h3>Gatos</h3>
-                             <button class="image-button" onclick="alert('Has hecho clic!')">
+                             <button class="image-button" onclick="('')">
                              <img src="imagenes/gatos.jpg" alt="Botón Imagen">
                             </div>
                         </section>
@@ -97,7 +101,7 @@
                         <section class="servicio">
                             <div class="iconos">
                              <h3>Promociones</h3>
-                             <button class="image-button" onclick="alert('Has hecho clic!')">
+                             <button class="image-button" onclick="('')">
                              <img src="imagenes/promo.jpg" alt="promo">
                             </div>
                         </section>
@@ -138,4 +142,5 @@
                 </footer>
         
   </body>
+  <script src="main.js"></script>
 </html>

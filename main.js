@@ -3,16 +3,21 @@ const containerCartProducts = document.querySelector('.container-cart-products')
 
 btnCart.addEventListener('click', () => {
     containerCartProducts.classList.toggle('hidden-cart')
-     AgregarCarritoStorage ();
 	 
 })
 
+let allProducts = [];
+
 function AgregarCarritoStorage(){
+	localStorage.setItem('carrito',JSON.stringify(allProducts));
+}
 
-	localStorage.setItem('carrito',JSON.stringify(allProducts
-
-	))
-
+window.onload = function(){
+	debugger;
+	var productos = localStorage.getItem('carrito');
+	if(productos){
+		allProducts = JSON.parse(productos);
+	}
 }
 
 const cartInfo = document.querySelector('.cart-product');
@@ -22,7 +27,6 @@ const rowProduct = document.querySelector('.row-product');
 const productsList = document.querySelector('.products');
 
 
-let allProducts = [];
 
 const valorTotal = document.querySelector('.total-pagar');
 
@@ -62,7 +66,7 @@ productsList.addEventListener('click', e => {
 		} else {
 			allProducts = [...allProducts, infoProduct];
 		}
-         AgregarCarritoStorage();
+        AgregarCarritoStorage();
 		showHTML();
 	}
 });
@@ -77,7 +81,6 @@ rowProduct.addEventListener('click', e => {
 		);
 
 		console.log(allProducts);
-		AgregarCarritoStorage();
 
 		showHTML();
 	}
